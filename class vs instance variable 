@@ -1,0 +1,27 @@
+# Day 3 - Class Variable - Sir's SHSS Example (Page 2)
+class Student:
+    school_name = "SHSS" # Declaration inside class
+
+    def __init__(self):
+        Student.school_code = 101 # Inside constructor with class name
+        print(f"Inside __init__ school: {Student.school_name}")
+
+    def display(self):
+        Student.school_city = "Jhingurdha" # Inside instance method
+        print(f"Inside method: {Student.school_name}, {Student.school_code}")
+
+    @classmethod
+    def update_code(cls, new_code):
+        cls.school_code = new_code
+
+# Outside class
+Student.city_pin = 486889 # Declaration outside class
+
+s1 = Student()
+print(f"City pin: {Student.city_pin}")
+s1.display()
+print(f"All class vars: {Student.school_name}, {Student.city_pin}, {Student.school_city}")
+
+# Proof: Class var ID is same for all objects
+s2 = Student()
+print(f"ID same? {id(Student.school_name)} == {id(s2.school_name)}")
