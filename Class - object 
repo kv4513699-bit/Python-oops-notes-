@@ -1,0 +1,22 @@
+# Day 1 - Class, Object, self and __init__
+class Demo:
+    pass
+
+print(f"Class ID: {id(Demo)}")
+
+obj1 = Demo()
+obj2 = Demo()
+
+print(f"Object 1 ID: {id(obj1)}")
+print(f"Object 2 ID: {id(obj2)}")
+
+# Main Concept from sir notes
+class Student:
+    def __init__(self, n, e, a):
+        self.name = n
+        self.email = e
+        self.age = a
+        print(f"Current object address: {id(self)}")
+
+s1 = Student("Neeraj", "n@gmail.com", 38)
+print(f"Data: {s1.name}, {s1.email}, {s1.age}")
