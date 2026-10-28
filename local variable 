@@ -1,0 +1,15 @@
+# Day 4 - Local Variable
+class Demo:
+    def __init__(self):
+        y = 20 # Local variable - only inside this method
+        print(f"Inside __init__, local y = {y}")
+        # print(self.y) -> Error dega
+
+    def show(self):
+        z = 50 # Another local variable
+        print(f"Inside show, local z = {z}")
+
+obj = Demo()
+obj.show()
+# print(y) -> Bahar access nahi kar sakte, Error ayega
+print("Local variable sirf method ke andar hi rehta hai")
