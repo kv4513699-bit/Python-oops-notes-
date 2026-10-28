@@ -1,0 +1,19 @@
+# Day 2 - Instance Variable
+class Student:
+    def __init__(self, name):
+        self.n = name  # Inside constructor with self
+        self.c = "Bhopal"
+        print(f"Inside constructor: {self.n}")
+
+    def show(self):
+        self.roll = 101 # Inside instance method
+        print(f"Inside method: {self.n}, {self.roll}")
+
+# Declaration
+s1 = Student("Neeraj")
+s1.e = "n@gmail.com" # Outside class with object
+s1.a = 38
+
+print(f"Final: {s1.n}, {s1.e}, {s1.a}, {s1.c}")
+s1.show()
+print(f"Roll added later: {s1.roll}")
